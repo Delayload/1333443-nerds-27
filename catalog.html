@@ -37,12 +37,58 @@
             <h1>Магазин готовых шаблонов</h1> 
             <section>
                 <h2>Фильтр товаров</h2>
-                <!-- Здесь будет форма -->
+                <form method="get">
+                    <fieldset>
+                      <legend>Сетка:</legend>
+                      <ul>
+                        <li>
+                          <input type="radio" name="grid-type" value="adaptive" id="filter-adaptive" checked>
+                          <label for="filter-adaptive">Адаптивная</label>
+                        </li>
+                        <li>
+                          <input type="radio" name="grid-type" value="fixed" id="filter-fixed">
+                          <label for="filter-care">Фиксированная</label>
+                        </li>
+                        <li>
+                          <input type="radio" name="grid-type" value="fluid" id="filter-fluid">
+                          <label for="filter-accessories">Резиновая</label>
+                        </li>
+                      </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Особенности:</legend>
+                        <ul>
+                          <li>
+                            <input type="checkbox" name="slider" id="filter-slider" checked>
+                            <label for="filter-slider">Слайдер</label>
+                          </li>
+                          <li>
+                            <input type="checkbox" name="benefits-block" id="filter-benefits-block">
+                            <label for="filter-benefits-block">Блок преимуществ</label>
+                          </li>
+                          <li>
+                            <input type="checkbox" name="news" id="filter-news" checked>
+                            <label for="filter-news">Новости</label>
+                          </li>
+                          <li>
+                            <input type="checkbox" name="gallery" id="filter-gallery">
+                            <label for="filter-gallery">Галерея</label>
+                          </li>
+                          <li>
+                            <input type="checkbox" name="bin" id="filter-bin">
+                            <label for="filter-bin">Корзина</label>
+                          </li>
+                        </ul>
+                      </fieldset>
+                    <button type="submit">
+                      Показать
+                    </button>
+                  </form>
             </section>
 
             <section>
                 <div>
-                    <img src="img/img-sedona.jpg" alt="Sedona" height="576" weight="360">
+                    <img src="img/img-sedona.jpg" alt="сайт для туристов Седона" height="576" weight="360">
                     <div>
                         <h3>Sedona</h3>
                         <p>Информационный сайт для туристов</p>
@@ -51,7 +97,7 @@
                 </div>
 
                 <div>
-                    <img src="img/img-pink.jpg" alt="Pink App" height="576" weight="360">
+                    <img src="img/img-pink.jpg" alt="мобильное приложение Пинк" height="576" weight="360">
                     <div>
                         <h3>Pink App</h3>
                         <p>Продуктовый лендинг приложения для IOS и Android</p>
@@ -60,7 +106,7 @@
                 </div>
 
                 <div>
-                    <img src="img/img-barbershop.jpg" alt="Barbershop" height="576" weight="360">
+                    <img src="img/img-barbershop.jpg" alt="сайт салона красоты Барбершоп" height="576" weight="360">
                     <div>
                         <h3>Barbershop</h3>
                         <p>Сайт салона красоты. Для мужчин, да.</p>
@@ -69,7 +115,7 @@
                 </div>
 
                 <div>
-                    <img src="img/img-mishka.jpg" alt="Mishka" height="576" weight="360">
+                    <img src="img/img-mishka.jpg" alt="интернет магазин вязанных игрушек Мишка" height="576" weight="360">
                     <div>
                         <h3>Mishka</h3>
                         <p>Интернет-магазин вязанных игрушек</p>
@@ -78,7 +124,7 @@
                 </div>
 
                 <div>
-                    <img src="img/img-aplus.jpg" alt="A plus" height="576" weight="360">
+                    <img src="img/img-aplus.jpg" alt="лендинг курсов повышения квалификации А плюс" height="576" weight="360">
                     <div>
                         <h3>A plus</h3>
                         <p>Лендинг курсов повышения квалификации</p>
@@ -87,7 +133,7 @@
                 </div>
 
                 <div>
-                    <img src="img/img-kvast.jpg" alt="Кваст" height="576" weight="360">
+                    <img src="img/img-kvast.jpg" alt="промо сайт производителя крафтового кваса Кваст" height="576" weight="360">
                     <div>
                         <h3>Кваст</h3>
                         <p>Промо-сайт производителя крафтового кваса</p>
@@ -106,7 +152,6 @@
         <footer>
             <div>
                 <img src="img/map.png" width="1440" height="416" alt="Карта с нашим адресом Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-                <img src="img/map-marker.png" width="231" height="190" alt="Маркер на карте">
                 <div>
                     <p>NЁRDS DESIGN STUDIO</p>
                     <p>191186, Санкт-Петербург, <br>
@@ -126,5 +171,24 @@
                 <p>Скидка 10% для друзей из социальных сетей.</p>
             </div>
         </footer>
+        <section>
+            <h2>Обратная связь</h2>
+            <form  method="post">
+                <legend>Напишите нам</legend>
+              <p>
+                <label for="contact-name">Ваше имя:</label>
+                <input id="contact-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+              </p>
+              <p>
+                <label for="contact-phone">Ваш e-mail:</label>
+                <input id="contact-phone" type="email" name="e-mail" value="" placeholder="email@example.com">
+              </p>
+              <p>
+                <label for="contact-phone">Текст письма:</label>
+                <input id="contact-phone" type="text" name="text" value="" placeholder="В свободной форме">
+              </p>
+              <button type="submit">Отправить</button>
+            </form> 
+        </section>
     </body>
 </html>
