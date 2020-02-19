@@ -171,24 +171,25 @@
                 <p>Скидка 10% для друзей из социальных сетей.</p>
             </div>
         </footer>
-        <section>
+        <div>
             <h2>Обратная связь</h2>
-            <form  method="post">
+            <form method="post">
                 <legend>Напишите нам</legend>
-              <p>
+              <div class="form-group">
                 <label for="contact-name">Ваше имя:</label>
                 <input id="contact-name" type="text" name="name" value="" placeholder="Имя Фамилия">
-              </p>
-              <p>
+              </div>
+              <div class="form-group">
                 <label for="contact-phone">Ваш e-mail:</label>
                 <input id="contact-phone" type="email" name="e-mail" value="" placeholder="email@example.com">
-              </p>
-              <p>
+              </div>
+              <div class="form-group">
                 <label for="contact-phone">Текст письма:</label>
-                <input id="contact-phone" type="text" name="text" value="" placeholder="В свободной форме">
-              </p>
+                <textarea id="contact-phone"  name="text" placeholder="В свободной форме"></textarea>
+              </div>
               <button type="submit">Отправить</button>
             </form> 
-        </section>
+            <button type="button"></button>
+        </div>
     </body>
 </html>
