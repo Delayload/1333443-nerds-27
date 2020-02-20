@@ -39,51 +39,91 @@
                 <h2>Фильтр товаров</h2>
                 <form method="get">
                     <fieldset>
-                      <legend>Сетка:</legend>
-                      <ul>
-                        <li>
-                          <input type="radio" name="grid-type" value="adaptive" id="filter-adaptive" checked>
-                          <label for="filter-adaptive">Адаптивная</label>
-                        </li>
-                        <li>
-                          <input type="radio" name="grid-type" value="fixed" id="filter-fixed">
-                          <label for="filter-care">Фиксированная</label>
-                        </li>
-                        <li>
-                          <input type="radio" name="grid-type" value="fluid" id="filter-fluid">
-                          <label for="filter-accessories">Резиновая</label>
-                        </li>
-                      </ul>
+                        <legend>Стоимость:</legend>
+
+                        <div class="range"></div>
+                        
+                        <div>
+                            <label for="low-price">от</label>
+                            <input id="low-price" type="text" name="low-range" placeholder="0">
+                            <label for="high-price">до</label>
+                            <input id="high-price" type="text" name="high-range" placeholder="15 000">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Сортировать:</legend>
+                        <ul>
+                            <li>
+                                <input type="radio" name="sort-type" value="cost" id="filter-cost" checked>
+                                <label for="filter-cost">По цене</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="sort-type" value="type" id="filter-type">
+                                <label for="filter-type">По типу</label>
+                            </li> 
+                            <li>
+                                <input type="radio" name="sort-type" value="name" id="filter-name">
+                                <label for="filter-name">По названию</label>
+                            </li> 
+                        </ul>
+                        <ul>
+                            <li>
+                                <input type="radio" name="sort-switch" value="up" id="filter-down" checked>
+                                <label for="filter-down">Сортировка по убыванию</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="sort-switch" value="down" id="filter-up">
+                                <label for="filter-up">Сортировка по возрастанию</label>
+                            </li> 
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Сетка:</legend>
+                        <ul>
+                            <li>
+                                <input type="radio" name="grid-type" value="adaptive" id="filter-adaptive" checked>
+                                <label for="filter-adaptive">Адаптивная</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="grid-type" value="fixed" id="filter-fixed">
+                                <label for="filter-fixed">Фиксированная</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="grid-type" value="fluid" id="filter-fluid">
+                                <label for="filter-fluid">Резиновая</label>
+                            </li>
+                        </ul>
                     </fieldset>
                     <fieldset>
                         <legend>Особенности:</legend>
                         <ul>
-                          <li>
-                            <input type="checkbox" name="slider" id="filter-slider" checked>
-                            <label for="filter-slider">Слайдер</label>
-                          </li>
-                          <li>
-                            <input type="checkbox" name="benefits-block" id="filter-benefits-block">
-                            <label for="filter-benefits-block">Блок преимуществ</label>
-                          </li>
-                          <li>
-                            <input type="checkbox" name="news" id="filter-news" checked>
-                            <label for="filter-news">Новости</label>
-                          </li>
-                          <li>
-                            <input type="checkbox" name="gallery" id="filter-gallery">
-                            <label for="filter-gallery">Галерея</label>
-                          </li>
-                          <li>
-                            <input type="checkbox" name="bin" id="filter-bin">
-                            <label for="filter-bin">Корзина</label>
-                          </li>
+                            <li>
+                                <input type="checkbox" name="slider" id="filter-slider" checked>
+                                <label for="filter-slider">Слайдер</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="benefits-block" id="filter-benefits-block">
+                                <label for="filter-benefits-block">Блок преимуществ</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="news" id="filter-news" checked>
+                                <label for="filter-news">Новости</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="gallery" id="filter-gallery">
+                                <label for="filter-gallery">Галерея</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="bin" id="filter-bin">
+                                <label for="filter-bin">Корзина</label>
+                            </li>
                         </ul>
                       </fieldset>
                     <button type="submit">
                       Показать
                     </button>
-                  </form>
+                </form>
             </section>
 
             <section>
@@ -175,19 +215,19 @@
             <h2>Обратная связь</h2>
             <form method="post">
                 <legend>Напишите нам</legend>
-              <div class="form-group">
-                <label for="contact-name">Ваше имя:</label>
-                <input id="contact-name" type="text" name="name" value="" placeholder="Имя Фамилия">
-              </div>
-              <div class="form-group">
-                <label for="contact-phone">Ваш e-mail:</label>
-                <input id="contact-phone" type="email" name="e-mail" value="" placeholder="email@example.com">
-              </div>
-              <div class="form-group">
-                <label for="contact-phone">Текст письма:</label>
-                <textarea id="contact-phone"  name="text" placeholder="В свободной форме"></textarea>
-              </div>
-              <button type="submit">Отправить</button>
+                <div class="form-group">
+                    <label for="contact-name">Ваше имя:</label>
+                    <input id="contact-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+                </div>
+                <div class="form-group">
+                        <label for="contact-phone">Ваш e-mail:</label>
+                        <input id="contact-phone" type="email" name="e-mail" value="" placeholder="email@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="contact-phone">Текст письма:</label>
+                    <textarea id="contact-phone"  name="text" placeholder="В свободной форме"></textarea>
+                </div>
+                <button type="submit">Отправить</button>
             </form> 
             <button type="button"></button>
         </div>
