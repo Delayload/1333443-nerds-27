@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <title>Нёрдс Каталог</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
         <header  class="header">
@@ -20,22 +23,22 @@
                             <a class="navigation__link" href="#">Клиенты</a>
                         </li>
                         <li class="navigation__item">
-                            <a class="navigation__link" href="catalog.html">Магазин</a>
+                            <a class="navigation__link current-page" href="catalog.html">Магазин</a>
                         </li>
                         <li class="navigation__item">
                             <a class="navigation__link" href="#">Контакты</a>
                         </li>
                     </ul>
                 </nav>
-                <p>Магазин готовых шаблонов</p>  
                 <a class="header-user__navigation" href="#">Корзина</a>
+                <p class="header-title">Магазин готовых шаблонов</p>  
             </div>  
         </header>    
 
         <main class="catalog-page">
             <h1 class="catalog-page__heading visually-hidden">Магазин готовых шаблонов</h1> 
             <section class="catalog-page__filter">
-                <h2 class="filter__heading">Фильтр товаров</h2>
+                <h2 class="filter__heading visually-hidden">Фильтр товаров</h2>
                 <form class="filter__form" method="get">
                     <fieldset class="filter-form__fieldset fieldset-price">
                         <legend class="fieldset-price__legend">Стоимость:</legend>
@@ -139,7 +142,7 @@
                     <div  class="products-item__hover">
                         <h3 class="product-hover__heading">Sedona</h3>
                         <p class="product-hover__discription">Информационный сайт для туристов</p>
-                        <button class="product-hover__buy" type="button"></button>
+                        <button class="product-hover__buy button" type="button"></button>
                     </div>
                 </div>
 
@@ -148,7 +151,7 @@
                     <div  class="products-item__hover">
                         <h3 class="product-hover__heading" class="product-hover__name">Pink App</h3>
                         <p class="product-hover__discription">Продуктовый лендинг приложения для IOS и Android</p>
-                        <button class="product-hover__buy" type="button">9900 руб.</button>
+                        <button class="product-hover__buy button" type="button">9900 руб.</button>
                     </div>
                 </div>
 
@@ -157,7 +160,7 @@
                     <div  class="products-item__hover">
                         <h3 class="product-hover__heading" >Barbershop</h3>
                         <p class="product-hover__discription">Сайт салона красоты. Для мужчин, да.</p>
-                        <button class="product-hover__buy" type="button">9900 руб.</button>
+                        <button class="product-hover__buy button" type="button">9900 руб.</button>
                     </div>
                 </div>
 
@@ -166,7 +169,7 @@
                     <div  class="products-item__hover">
                         <h3 class="product-hover__heading" >Mishka</h3>
                         <p class="product-hover__discription">Интернет-магазин вязанных игрушек</p>
-                        <button class="product-hover__buy" type="button">9900 руб.</button>
+                        <button class="product-hover__buy button" type="button">9900 руб.</button>
                     </div>
                 </div>
 
@@ -175,7 +178,7 @@
                     <div  class="products-item__hover">
                         <h3 class="product-hover__heading" >A plus</h3>
                         <p class="product-hover__discription">Лендинг курсов повышения квалификации</p>
-                        <button class="product-hover__buy" type="button">9900 руб.</button>
+                        <button class="product-hover__buy button" type="button">9900 руб.</button>
                     </div>
                 </div>
 
@@ -184,14 +187,14 @@
                     <div  class="products-item__hover">
                         <h3 class="product-hover__heading" >Кваст</h3>
                         <p class="product-hover__discription">Промо-сайт производителя крафтового кваса</p>
-                        <button class="product-hover__buy" type="button">9900 руб.</button>
+                        <button class="product-hover__buy button" type="button">9900 руб.</button>
                     </div>
                 </div>
             </section>
 
             <ul class="catalog-pagination__list">
                 <li class="catalog-pagination__item">
-                    <a class="catalog-pagination__link">1</a>
+                    <a class="catalog-pagination__link current-pagination__link">1</a>
                 </li>
                 <li class="catalog-pagination__item">
                     <a class="catalog-pagination__link" href="#">2</a>
@@ -214,7 +217,7 @@
                         ул. Б. Конюшенная, д. 19/8
                     </p>
                     <p  class="footer-map__telephone">тел. +7 (812) 275-75-75</p>
-                    <button class="footer-map__button" type="button">Напишите нам</button>
+                    <button class="footer-map__button button" type="button">Напишите нам</button>
                 </div>
             </div>
             
