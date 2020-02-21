@@ -5,231 +5,255 @@
         <title>Нёрдс Каталог</title>
     </head>
     <body>
-        <header>
-            <div>
-                <a href="index.html">
-                    <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии «Нёрдс»">
+        <header  class="header">
+            <div class="header-site_navigation">
+                <a class="site_navigation__link" href="index.html">
+                    <img  class="site-navigation__logo" src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии «Нёрдс»">
                 </a>
 
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#">Студия</a>
+                <nav class="site_navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#">Студия</a>
                         </li>
-                        <li>
-                            <a href="#">Клиенты</a>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#">Клиенты</a>
                         </li>
-                        <li>
-                            <a href="catalog.html">Магазин</a>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="catalog.html">Магазин</a>
                         </li>
-                        <li>
-                            <a href="#">Контакты</a>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#">Контакты</a>
                         </li>
                     </ul>
                 </nav>
-                <p>Магазин готовых шаблонов</p> 
-                <a href="#">Корзина</a>
-            </div>
-                       
+                <p>Магазин готовых шаблонов</p>  
+                <a class="header-user__navigation" href="#">Корзина</a>
+            </div>  
         </header>    
 
-        <main>
-            <h1>Магазин готовых шаблонов</h1> 
-            <section>
-                <h2>Фильтр товаров</h2>
-                <form method="get">
-                    <fieldset>
-                        <legend>Стоимость:</legend>
-
-                        <div class="range"></div>
+        <main class="catalog-page">
+            <h1 class="catalog-page__heading visually-hidden">Магазин готовых шаблонов</h1> 
+            <section class="catalog-page__filter">
+                <h2 class="filter__heading">Фильтр товаров</h2>
+                <form class="filter__form" method="get">
+                    <fieldset class="filter-form__fieldset fieldset-price">
+                        <legend class="fieldset-price__legend">Стоимость:</legend>
+                        <div class="fieldset-price__range"></div>
                         
-                        <div>
-                            <label for="low-price">от</label>
-                            <input id="low-price" type="text" name="low-range" placeholder="0">
-                            <label for="high-price">до</label>
-                            <input id="high-price" type="text" name="high-range" placeholder="15 000">
+                        <div class="fieldset-price__values">
+                            <div class="fieldset-price__low">
+                                <label class="fieldset-price__label" for="low-price">от</label>
+                                <input class="fieldset-price__input" id="low-price" type="text" name="low-range" placeholder="0">
+                            </div>
+                            <div class="fieldset-price__high">
+                                <label class="fieldset-price__label" for="high-price">до</label>
+                                <input class="fieldset-price__input" id="high-price" type="text" name="high-range" placeholder="15 000">
+                            </div>
                         </div>
                     </fieldset>
 
-                    <fieldset>
-                        <legend>Сортировать:</legend>
-                        <ul>
-                            <li>
-                                <input type="radio" name="sort-type" value="cost" id="filter-cost" checked>
-                                <label for="filter-cost">По цене</label>
+                    <fieldset class="filter-form__fieldset fieldset-grid">
+                        <legend  class="fieldset-grid__legend">Сетка:</legend>
+                        <ul class="fieldset-grid__list">
+                            <li class="fieldset-grid__item">
+                                <input class="fieldset-grid__input" type="radio" name="grid-type" value="adaptive" id="filter-adaptive" checked>
+                                <label class="fieldset-grid__label" for="filter-adaptive">Адаптивная</label>
                             </li>
-                            <li>
-                                <input type="radio" name="sort-type" value="type" id="filter-type">
-                                <label for="filter-type">По типу</label>
-                            </li> 
-                            <li>
-                                <input type="radio" name="sort-type" value="name" id="filter-name">
-                                <label for="filter-name">По названию</label>
-                            </li> 
-                        </ul>
-                        <ul>
-                            <li>
-                                <input type="radio" name="sort-switch" value="up" id="filter-down" checked>
-                                <label for="filter-down">Сортировка по убыванию</label>
+                            <li class="fieldset-grid__item">
+                                <input class="fieldset-grid__input" type="radio" name="grid-type" value="fixed" id="filter-fixed">
+                                <label class="fieldset-grid__label" for="filter-fixed">Фиксированная</label>
                             </li>
-                            <li>
-                                <input type="radio" name="sort-switch" value="down" id="filter-up">
-                                <label for="filter-up">Сортировка по возрастанию</label>
-                            </li> 
-                        </ul>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Сетка:</legend>
-                        <ul>
-                            <li>
-                                <input type="radio" name="grid-type" value="adaptive" id="filter-adaptive" checked>
-                                <label for="filter-adaptive">Адаптивная</label>
-                            </li>
-                            <li>
-                                <input type="radio" name="grid-type" value="fixed" id="filter-fixed">
-                                <label for="filter-fixed">Фиксированная</label>
-                            </li>
-                            <li>
-                                <input type="radio" name="grid-type" value="fluid" id="filter-fluid">
-                                <label for="filter-fluid">Резиновая</label>
+                            <li class="fieldset-grid__item">
+                                <input class="fieldset-grid__input" type="radio" name="grid-type" value="fluid" id="filter-fluid">
+                                <label class="fieldset-grid__label" for="filter-fluid">Резиновая</label>
                             </li>
                         </ul>
                     </fieldset>
-                    <fieldset>
-                        <legend>Особенности:</legend>
-                        <ul>
-                            <li>
-                                <input type="checkbox" name="slider" id="filter-slider" checked>
-                                <label for="filter-slider">Слайдер</label>
+                    <fieldset class="filter-form__fieldset fieldset-features">
+                        <legend class="fieldset-features__legend">Особенности:</legend>
+                        <ul class="fieldset-features__list">
+                            <li class="fieldset-features__item">
+                                <input class="fieldset-features__input" type="checkbox" name="slider" id="filter-slider" checked>
+                                <label class="fieldset-features__label" for="filter-slider">Слайдер</label>
                             </li>
-                            <li>
-                                <input type="checkbox" name="benefits-block" id="filter-benefits-block">
-                                <label for="filter-benefits-block">Блок преимуществ</label>
+                            <li class="fieldset-features__item">
+                                <input class="fieldset-features__input" type="checkbox" name="benefits-block" id="filter-benefits-block">
+                                <label class="fieldset-features__label" for="filter-benefits-block">Блок преимуществ</label>
                             </li>
-                            <li>
-                                <input type="checkbox" name="news" id="filter-news" checked>
-                                <label for="filter-news">Новости</label>
+                            <li class="fieldset-features__item">
+                                <input class="fieldset-features__input" type="checkbox" name="news" id="filter-news" checked>
+                                <label class="fieldset-features__label" for="filter-news">Новости</label>
                             </li>
-                            <li>
-                                <input type="checkbox" name="gallery" id="filter-gallery">
-                                <label for="filter-gallery">Галерея</label>
+                            <li class="fieldset-features__item">
+                                <input class="fieldset-features__input" type="checkbox" name="gallery" id="filter-gallery">
+                                <label class="fieldset-features__label" for="filter-gallery">Галерея</label>
                             </li>
-                            <li>
-                                <input type="checkbox" name="bin" id="filter-bin">
-                                <label for="filter-bin">Корзина</label>
+                            <li class="fieldset-features__item">
+                                <input class="fieldset-features__input" type="checkbox" name="bin" id="filter-bin">
+                                <label class="fieldset-features__label" for="filter-bin">Корзина</label>
                             </li>
                         </ul>
                       </fieldset>
-                    <button type="submit">
-                      Показать
-                    </button>
+                    <button class="filter-form__btn" type="submit">Показать</button>
+                </form>
+                <form class="sort__form" method="get">
+                    <fieldset class="sort-form__fieldset fieldset-sort">
+                        <legend class="fieldset-sort__legend">Сортировать:</legend>
+                        <ul class="fieldset-sort__list">
+                            <li class="fieldset-sort__item">
+                                <input class="fieldset-sort__input" type="radio" name="sort-type" value="cost" id="filter-cost" checked>
+                                <label class="fieldset-sort__label" for="filter-cost">По цене</label>
+                            </li>
+                            <li class="fieldset-sort__item">
+                                <input class="fieldset-sort__input" type="radio" name="sort-type" value="type" id="filter-type">
+                                <label class="fieldset-sort__label" for="filter-type">По типу</label>
+                            </li> 
+                            <li class="fieldset-sort__item">
+                                <input class="fieldset-sort__input" type="radio" name="sort-type" value="name" id="filter-name">
+                                <label class="fieldset-sort__label" for="filter-name">По названию</label>
+                            </li> 
+                        </ul>
+                    </fieldset>
+
+                    <fieldset>  
+                        <legend class="fieldset-switch__legend visually-hidden">Сортировка по цене:</legend>
+                        <ul class="fieldset-switch__list">
+                            <li class="fieldset-switch__item">
+                                <input class="fieldset-switch__input" type="radio" name="sort-switch" value="up" id="filter-down" checked>
+                                <label class="fieldset-switch__label" for="filter-down">Сортировка по убыванию</label>
+                            </li>
+                            <li class="fieldset-switch__item">
+                                <input class="fieldset-switch__input" type="radio" name="sort-switch" value="down" id="filter-up">
+                                <label class="fieldset-switch__label" for="filter-up">Сортировка по возрастанию</label>
+                            </li> 
+                        </ul>
+                    </fieldset>
                 </form>
             </section>
 
-            <section>
-                <div>
-                    <img src="img/img-sedona.jpg" alt="сайт для туристов Седона" height="576" weight="360">
-                    <div>
-                        <h3>Sedona</h3>
-                        <p>Информационный сайт для туристов</p>
-                        <button type="button"></button>
+            <section  class="catalog-products">
+                <h2 class="catalog-products__heading visually-hidden">Список товаров</h2>
+                <div class="catalog-products__item">
+                    <img  class="products-item__img" src="img/img-sedona.jpg" alt="сайт для туристов Седона" height="576" weight="360">
+                    <div  class="products-item__hover">
+                        <h3 class="product-hover__heading">Sedona</h3>
+                        <p class="product-hover__discription">Информационный сайт для туристов</p>
+                        <button class="product-hover__buy" type="button"></button>
                     </div>
                 </div>
 
-                <div>
-                    <img src="img/img-pink.jpg" alt="мобильное приложение Пинк" height="576" weight="360">
-                    <div>
-                        <h3>Pink App</h3>
-                        <p>Продуктовый лендинг приложения для IOS и Android</p>
-                        <button type="button">9900 руб.</button>
+                <div class="catalog-products__item">
+                    <img  class="products-item__img" src="img/img-pink.jpg" alt="мобильное приложение Пинк" height="576" weight="360">
+                    <div  class="products-item__hover">
+                        <h3 class="product-hover__heading" class="product-hover__name">Pink App</h3>
+                        <p class="product-hover__discription">Продуктовый лендинг приложения для IOS и Android</p>
+                        <button class="product-hover__buy" type="button">9900 руб.</button>
                     </div>
                 </div>
 
-                <div>
-                    <img src="img/img-barbershop.jpg" alt="сайт салона красоты Барбершоп" height="576" weight="360">
-                    <div>
-                        <h3>Barbershop</h3>
-                        <p>Сайт салона красоты. Для мужчин, да.</p>
-                        <button type="button">9900 руб.</button>
+                <div class="catalog-products__item">
+                    <img  class="products-item__img" src="img/img-barbershop.jpg" alt="сайт салона красоты Барбершоп" height="576" weight="360">
+                    <div  class="products-item__hover">
+                        <h3 class="product-hover__heading" >Barbershop</h3>
+                        <p class="product-hover__discription">Сайт салона красоты. Для мужчин, да.</p>
+                        <button class="product-hover__buy" type="button">9900 руб.</button>
                     </div>
                 </div>
 
-                <div>
-                    <img src="img/img-mishka.jpg" alt="интернет магазин вязанных игрушек Мишка" height="576" weight="360">
-                    <div>
-                        <h3>Mishka</h3>
-                        <p>Интернет-магазин вязанных игрушек</p>
-                        <button type="button">9900 руб.</button>
+                <div class="catalog-products__item">
+                    <img  class="products-item__img" src="img/img-mishka.jpg" alt="интернет магазин вязанных игрушек Мишка" height="576" weight="360">
+                    <div  class="products-item__hover">
+                        <h3 class="product-hover__heading" >Mishka</h3>
+                        <p class="product-hover__discription">Интернет-магазин вязанных игрушек</p>
+                        <button class="product-hover__buy" type="button">9900 руб.</button>
                     </div>
                 </div>
 
-                <div>
-                    <img src="img/img-aplus.jpg" alt="лендинг курсов повышения квалификации А плюс" height="576" weight="360">
-                    <div>
-                        <h3>A plus</h3>
-                        <p>Лендинг курсов повышения квалификации</p>
-                        <button type="button">9900 руб.</button>
+                <div class="catalog-products__item">
+                    <img  class="products-item__img" src="img/img-aplus.jpg" alt="лендинг курсов повышения квалификации А плюс" height="576" weight="360">
+                    <div  class="products-item__hover">
+                        <h3 class="product-hover__heading" >A plus</h3>
+                        <p class="product-hover__discription">Лендинг курсов повышения квалификации</p>
+                        <button class="product-hover__buy" type="button">9900 руб.</button>
                     </div>
                 </div>
 
-                <div>
-                    <img src="img/img-kvast.jpg" alt="промо сайт производителя крафтового кваса Кваст" height="576" weight="360">
-                    <div>
-                        <h3>Кваст</h3>
-                        <p>Промо-сайт производителя крафтового кваса</p>
-                        <button type="button">9900 руб.</button>
+                <div class="catalog-products__item">
+                    <img class="products-item__img" src="img/img-kvast.jpg" alt="промо сайт производителя крафтового кваса Кваст" height="576" weight="360">
+                    <div  class="products-item__hover">
+                        <h3 class="product-hover__heading" >Кваст</h3>
+                        <p class="product-hover__discription">Промо-сайт производителя крафтового кваса</p>
+                        <button class="product-hover__buy" type="button">9900 руб.</button>
                     </div>
                 </div>
             </section>
 
-            <ul>
-                <li><a>1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">Следующая</a></li>
+            <ul class="catalog-pagination__list">
+                <li class="catalog-pagination__item">
+                    <a class="catalog-pagination__link">1</a>
+                </li>
+                <li class="catalog-pagination__item">
+                    <a class="catalog-pagination__link" href="#">2</a>
+                </li>
+                <li class="catalog-pagination__item">
+                    <a class="catalog-pagination__link" href="#">3</a>
+                </li>
+                <li class="catalog-pagination__item">
+                    <a class="catalog-pagination__link" href="#">Следующая</a>
+                </li>
             </ul>
         </main>
-        <footer>
-            <div>
+        
+        <footer class="footer">
+            <div class="footer-map">
                 <img src="img/map.png" width="1440" height="416" alt="Карта с нашим адресом Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-                <div>
-                    <p>NЁRDS DESIGN STUDIO</p>
-                    <p>191186, Санкт-Петербург, <br>
+                <div class="footer-map__info">
+                    <p  class="footer-map__header">NЁRDS DESIGN STUDIO</p>
+                    <p class="footer-map__adress">191186, Санкт-Петербург, <br>
                         ул. Б. Конюшенная, д. 19/8
                     </p>
-                    <p>тел. +7 (812) 275-75-75</p>
-                    <button>Напишите нам</button>
+                    <p  class="footer-map__telephone">тел. +7 (812) 275-75-75</p>
+                    <button class="footer-map__button" type="button">Напишите нам</button>
                 </div>
             </div>
-            <ul>
-                <li><a href="#">Вконтакте</a></li>
-                <li><a href="#">Фейсбук</a></li>
-                <li><a href="#">Инстаграм</a></li>
-            </ul>
+            
             <div>
-                <p>Давайте дружить, это выгодно!</p>
-                <p>Скидка 10% для друзей из социальных сетей.</p>
-            </div>
+                <ul class="footer-society">
+                    <li class="footer-item">
+                        <a class="footer-link" href="#">Вконтакте</a>
+                    </li>
+                    <li class="footer-item">
+                        <a class="footer-link" href="#">Фейсбук</a>
+                    </li>
+                    <li class="footer-item">
+                        <a class="footer-link" href="#">Инстаграм</a>
+                    </li>
+                </ul>
+                <div class="footer-sale">
+                    <p class="footer-sale__header">Давайте дружить, это выгодно!</p>
+                    <p class="footer-sale__text">Скидка 10% для друзей из социальных сетей.</p>
+                </div>
         </footer>
-        <div>
-            <h2>Обратная связь</h2>
-            <form method="post">
-                <legend>Напишите нам</legend>
-                <div class="form-group">
-                    <label for="contact-name">Ваше имя:</label>
-                    <input id="contact-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+        <div class="writeus-popup">
+            <h2 class="writeus-popup-heading visually-hidden">Обратная связь</h2>
+            <form class="writeus-popup__form" method="post">
+                <legend class="writeus-form__legend">Напишите нам</legend>
+                <div class="writeus-popup__item">
+                    <label class="writeus-popup__label" for="write-us-name">Ваше имя:</label>
+                    <input class="writeus-popup__input" id="write-us-name" type="text" name="name" placeholder="Имя Фамилия">
                 </div>
-                <div class="form-group">
-                        <label for="contact-phone">Ваш e-mail:</label>
-                        <input id="contact-phone" type="email" name="e-mail" value="" placeholder="email@example.com">
+                <div class="writeus-popup__item">
+                    <label class="writeus-popup__label" for="write-us-email">Ваш e-mail:</label>
+                    <input class="writeus-popup__input" id="write-us-email" type="email" name="email" placeholder="email@example.com">
                 </div>
-                <div class="form-group">
-                    <label for="contact-phone">Текст письма:</label>
-                    <textarea id="contact-phone"  name="text" placeholder="В свободной форме"></textarea>
+                <div class="writeus-popup__item">
+                    <label class="writeus-popup__label" for="write-us-text">Текст письма:</label>
+                    <textarea class="writeus-popup__input" id="write-us-text" name="text" placeholder="В свободной форме"></textarea>
                 </div>
-                <button type="submit">Отправить</button>
+                <button class="writeus-popup__button" type="submit">Отправить</button>
             </form> 
-            <button type="button"></button>
+            <button class="writeus-popup__close" type="button"></button>
         </div>
     </body>
 </html>
