@@ -12,13 +12,13 @@
             
             <div class="wrap">
                 <div class="header-site_navigation">
-                    <a class="site_navigation__link" href="index.html">
+                    <a class="site_navigation__link">
                         <img class="site-navigation__logo" src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии «Нёрдс»">
                     </a>
                     <nav class="site__navigation">
                         <ul class="navigation__list">
                             <li class="navigation__item">
-                                <a class="navigation__link current-page" href="#">Студия</a>
+                                <a class="navigation__link" href="#">Студия</a>
                             </li>
                             <li class="navigation__item">
                                 <a class="navigation__link" href="#">Клиенты</a>
@@ -78,11 +78,11 @@
             <h1 class="main-page__heading visually-hidden">Студия «Нёрдс»</h1>  
             <div class="wrap">
                 <section class="main-page__servises">
+                    <h2 class="servises__heading visually-hidden">Услуги</h2>
                     <div class="servises-list">
-                        <h2 class="servises__heading visually-hidden">Услуги</h2>
                         <div class="servises-item">
                             <h3 class="servises-item__title">Веб-сайты</h3>
-                            <p class="servises-item__text">Мир никогда не будет преждним<br> после того как увидит ваш сайт!</p>
+                            <p class="servises-item__text">Мир никогда не будет преждним после того как увидит ваш сайт!</p>
                             <a class="servises-item__link button" href="#">Заказать</a>
                         </div>
                         <div class="servises-item">
@@ -92,7 +92,7 @@
                         </div>
                         <div class="servises-item">
                             <h3 class="servises-item__title">Презентации</h3>
-                            <p class="servises-item__text">Вы даже не подозреваете,<br> насколько вы изумительны!</p>
+                            <p class="servises-item__text">Вы даже не подозреваете, насколько вы изумительны!</p>
                             <a class="servises-item__link button" href="#">Заказать</a>
                         </div>
                     </div>
@@ -100,12 +100,11 @@
             </div>
             <section class="main-page__about">
                 <h2 class="about__heading visually-hidden">О компании</h2>
-                
                 <div class="about-info wrap">
                     <div class="about-brief">
                         <p class="about-us">Мы — маленькая, но гордая
                             дизайн-студия из Краснодара.</p>
-                        <p class="about-qualities">Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br>
+                        <p class="about-qualities">Исповедуем принципы минимализма и чистоты. Ставим математический расчет
                             превыше креатива. Работаем не покладая рук, как роботы.</p>
                         <p class="about-orders">Выполняем заказы на разработку:</p>
                         <ul class="about-order__list">
@@ -113,7 +112,7 @@
                                 <p class="about-order__text">Веб-сайтов любой сложности</p>
                             </li>
                             <li class="about-order__item">
-                                <p class="about-order__text">Мобильных приложений для OS и Android</p>
+                                <p class="about-order__text">Мобильных приложений для IOS и Android</p>
                             </li>
                             <li class="about-order__item">
                                 <p class="about-order__text">Слайдшоу и видео для корпоративных презентаций</p>
@@ -124,44 +123,57 @@
                     <div class="about-statistic">
                         <img src="img/nerds-illustration.png" width="360" height="208" alt="Логотип студии «Нёрдс»">
                         <p class="about-statistic__heading">C 2004 года любим точность во всем:</p>
-                        <dl class="about-statistic__table">
-                            <dt class="statistic-table__caption">Уровень самоотдачи</dt>
-                            <dd class="statistic-table__value">146<sup>%</sup></dd>
-                            <dt class="statistic-table__caption">Соблюдение сроков</dt>
-                            <dd class="statistic-table__value">100<sup>%</sup></dd>
-                            <dt class="statistic-table__caption">Минимальная предоплата</dt>
-                            <dd class="statistic-table__value">50<sup>%</sup></dd>
-                        </dl>
-                    </div>
-                </div>
-
-                <div class="about-companies wrap">
-                    <div class="about-companies__item">
-                        <a class="about-companies__link" href="https://htmlacademy.ru/intensive/htmlcss">
-                        <img src="img/logo-1.png" width="199" height="68" alt="Логотип интерактивных онлайн-курсов «HTML Academy»">
-                    </div>
-                    <div class="about-companies__item">
-                        <a class="about-companies__link" href="#">
-                        <img src="img/logo-2.png" width="209" height="90" alt="Логотип барбершопа «Бородинский»">
-                    </div>  
-                    <div class="about-companies__item">
-                        <a class="about-companies__link" href="#">
-                        <img src="img/logo-3.png" width="185" height="52" alt="Логотип магазина оптики «Pink»">
-                    </div> 
-                    <div class="about-companies__item">
-                        <a class="about-companies__link" href="#">
-                        <img src="img/logo-4.png" width="173" height="84" alt="Логотип магазина «Mishka»">
+                        <ul  class="about-statistic__list">
+                            <li class="about-statistic__item">
+                                <p class="about-statistic__value">146<sup class="statistic-sup">%</sup></p>
+                                <p class="about-statistic__caption">Уровень самоотдачи</p>
+                            </li>
+                            <li class="about-statistic__item">
+                                <p class="about-statistic__value">100<sup  class="statistic-sup">%</sup></p>
+                                <p class="about-statistic__caption">Соблюдение сроков</p>
+                            </li>
+                            <li class="about-statistic__item">
+                                <p class="about-statistic__value">50<sup  class="statistic-sup">%</sup></p>
+                                <p class="about-statistic__caption">Минимальная предоплата</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>  
+            <section class="main-page__companies wrap">
+                <h2 class="companies__heading visually-hidden">Клиенты</h2>
+                <div class="companies">
+                    <div class="companies__item">
+                        <a class="companies__link" href="https://htmlacademy.ru/intensive/htmlcss">
+                            <img src="img/logo-1.png" width="199" height="68" alt="Логотип интерактивных онлайн-курсов «HTML Academy»">
+                        </a>                   
+                    </div>
+                    <div class="companies__item">
+                        <a class="companies__link" href="#">
+                            <img src="img/logo-2.png" width="209" height="90" alt="Логотип барбершопа «Бородинский»">
+                        </a>
+                    </div>  
+                    <div class="companies__item">
+                        <a class="companies__link" href="#">
+                            <img src="img/logo-3.png" width="185" height="52" alt="Логотип магазина оптики «Pink»">
+                        </a>                        
+                    </div> 
+                    <div class="companies__item">
+                        <a class="companies__link" href="#">
+                            <img src="img/logo-4.png" width="173" height="84" alt="Логотип магазина «Mishka»">
+                        </a>
+                    </div>
+                    
+                </div>
+            </section>
         </main>
 
         <footer class="footer">
             <div class="footer-map">
-                <img src="img/map.png" width="1440" height="416" alt="Карта с нашим адресом Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1584417585568!5m2!1sru!2sru" width="1440" height="416" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 <div class="footer-map__info">
                     <p  class="footer-map__heading">NЁRDS DESIGN STUDIO</p>
-                    <p class="footer-map__adress">191186, Санкт-Петербург, <br>
+                    <p class="footer-map__adress">191186, Санкт-Петербург,
                         ул. Б. Конюшенная, д. 19/8
                     </p>
                     <a href="tel:+78122757575" class="footer-map__telephone">тел. +7 (812) 275-75-75</a>
@@ -193,10 +205,11 @@
                 </div>
             </div>
         </footer>
-        <div class="writeus-popup  visually-hidden">
-            <h2 class="writeus-popup-heading visually-hidden">Обратная связь</h2>
+        <div class="writeus-popup">
+            <button class="writeus-popup__close" type="button"></button>
+            <h3 class="writeus-popup-heading">Напишите нам</h3>
             <form class="writeus-popup__form" method="post">
-                <legend class="writeus-form__legend">Напишите нам</legend>
+                <legend class="writeus-form__legend visually-hidden">Напишите нам</legend>
                 <div class="writeus-popup__item">
                     <label class="writeus-popup__label" for="write-us-name">Ваше имя:</label>
                     <input class="writeus-popup__input" id="write-us-name" type="text" name="name" placeholder="Имя Фамилия">
@@ -205,13 +218,14 @@
                     <label class="writeus-popup__label" for="write-us-email">Ваш e-mail:</label>
                     <input class="writeus-popup__input" id="write-us-email" type="email" name="email" placeholder="email@example.com">
                 </div>
-                <div class="writeus-popup__item">
+                <div class="writeus-popup__item textarea">
                     <label class="writeus-popup__label" for="write-us-text">Текст письма:</label>
-                    <textarea class="writeus-popup__input" id="write-us-text" name="text" placeholder="В свободной форме"></textarea>
+                    <textarea class="writeus-popup__textarea" id="write-us-text" name="text" rows="5" placeholder="В свободной форме"></textarea>
                 </div>
                 <button class="writeus-popup__button button" type="submit">Отправить</button>
             </form> 
-            <button class="writeus-popup__close" type="button"></button>
         </div>
+        <script src="js/modal.js"></script>
+        <script src="js/modal.js"></script>
     </body>
 </html>
