@@ -5,7 +5,7 @@
         <title>Нёрдс Каталог</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
         <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="css/style.min.css" rel="stylesheet">
     </head>
     <body>
         <header  class="header">
@@ -58,8 +58,8 @@
                                         <div class="toggle toggle-max"></div>
                                     </div>
                                     <div class="fieldset-price__values">                                  
-                                        <label class="fieldset-price__label" for="low-price">от <input name="min-price" type="text" value="0"></label>                                                                   
-                                        <label class="fieldset-price__label" for="high-price">до <input name="max-price" type="text" value="15 000"></label>                                                                       
+                                        <label class="fieldset-price__label" for="low-price">от <input name="min-price" id="low-price" type="text" value="0"></label>                                                                   
+                                        <label class="fieldset-price__label" for="high-price">до <input name="max-price" id="high-price" type="text" value="15 000"></label>                                                                       
                                     </div>
                                 </div>
                             </fieldset>
@@ -124,14 +124,14 @@
                                 </li>
                             </ul>
                             <p class="switch__list">
-                                <a class="switch__down" href="#"></a>
+                                <a class="switch__down active-switch" href="#"></a>
                                 <a class="switch__up" href="#"></a>
                             </p>
                         </div>
                         <section  class="catalog-products">
                             <h2 class="catalog-products__heading visually-hidden">Список товаров</h2>
                             <div class="catalog-products__item">
-                                <img  class="products-item__img" src="img/img-sedona.jpg" alt="сайт для туристов Седона" height="576" weight="360">
+                                <img  class="products-item__img" src="img/img-sedona.jpg" alt="сайт для туристов Седона" height="576" width="360">
                                 <div  class="products-item__hover">
                                     <a href="#" class="product-hover__heading">Sedona</a>
                                     <p class="product-hover__discription">Информационный сайт для туристов</p>
@@ -140,16 +140,16 @@
                             </div>
             
                             <div class="catalog-products__item">
-                                <img  class="products-item__img" src="img/img-pink.jpg" alt="мобильное приложение Пинк" height="576" weight="360">
+                                <img  class="products-item__img" src="img/img-pink.jpg" alt="мобильное приложение Пинк" height="576" width="360">
                                 <div  class="products-item__hover">
-                                    <a href="#" class="product-hover__heading" class="product-hover__name">Pink App</a>
+                                    <a href="#" class="product-hover__heading">Pink App</a>
                                     <p class="product-hover__discription">Продуктовый лендинг приложения для IOS и Android</p>
                                     <button class="product-hover__buy button" type="button">9 900 руб.</button>
                                 </div>
                             </div>
             
                             <div class="catalog-products__item">
-                                <img  class="products-item__img" src="img/img-barbershop.jpg" alt="сайт салона красоты Барбершоп" height="576" weight="360">
+                                <img  class="products-item__img" src="img/img-barbershop.jpg" alt="сайт салона красоты Барбершоп" height="576" width="360">
                                 <div  class="products-item__hover">
                                     <a href="#" class="product-hover__heading" >Barbershop</a>
                                     <p class="product-hover__discription">Сайт салона красоты. Для мужчин, да.</p>
@@ -158,7 +158,7 @@
                             </div>
             
                             <div class="catalog-products__item">
-                                <img  class="products-item__img" src="img/img-mishka.jpg" alt="интернет магазин вязанных игрушек Мишка" height="576" weight="360">
+                                <img  class="products-item__img" src="img/img-mishka.jpg" alt="интернет магазин вязанных игрушек Мишка" height="576" width="360">
                                 <div  class="products-item__hover">
                                     <a href="#" class="product-hover__heading" >Mishka</a>
                                     <p class="product-hover__discription">Интернет-магазин вязанных игрушек</p>
@@ -167,7 +167,7 @@
                             </div>
             
                             <div class="catalog-products__item">
-                                <img  class="products-item__img" src="img/img-aplus.jpg" alt="лендинг курсов повышения квалификации А плюс" height="576" weight="360">
+                                <img  class="products-item__img" src="img/img-aplus.jpg" alt="лендинг курсов повышения квалификации А плюс" height="576" width="360">
                                 <div  class="products-item__hover">
                                     <a href="#" class="product-hover__heading" >A plus</a>
                                     <p class="product-hover__discription">Лендинг курсов повышения квалификации</p>
@@ -176,7 +176,7 @@
                             </div>
             
                             <div class="catalog-products__item">
-                                <img class="products-item__img" src="img/img-kvast.jpg" alt="промо сайт производителя крафтового кваса Кваст" height="576" weight="360">
+                                <img class="products-item__img" src="img/img-kvast.jpg" alt="промо сайт производителя крафтового кваса Кваст" height="576" width="360">
                                 <div  class="products-item__hover">
                                     <a href="#" class="product-hover__heading" >Кваст</a>
                                     <p class="product-hover__discription">Промо-сайт производителя крафтового кваса</p>
@@ -204,12 +204,13 @@
             </div>
         </main>
         
+ 
         <footer class="footer">
             <div class="footer-map">
                 <div class="map-img">
-                    <img src="img/map.png" alt="Адрес" height="1440" weight="416">
+                    <img src="img/map.png" alt="Адрес" height="1440" width="416">
                 </div>      
-                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1584417585568!5m2!1sru!2sru" width="1440" height="416" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1584417585568!5m2!1sru!2sru" width="1440" height="416" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 <div class="footer-map__info">
                     <p  class="footer-map__heading">NЁRDS DESIGN STUDIO</p>
                     <p class="footer-map__adress">191186, Санкт-Петербург, <br>
@@ -247,7 +248,7 @@
             <button class="writeus-popup__close" type="button"></button>
             <h3 class="writeus-popup-heading">Напишите нам</h3>
             <form class="writeus-popup__form" method="post">
-                <legend class="writeus-form__legend visually-hidden">Напишите нам</legend>
+                <p class="writeus-form__legend visually-hidden">Напишите нам</p>
                 <div class="writeus-popup__item">
                     <label class="writeus-popup__label" for="write-us-name">Ваше имя:</label>
                     <input class="writeus-popup__input" id="write-us-name" type="text" name="name" placeholder="Имя Фамилия">
