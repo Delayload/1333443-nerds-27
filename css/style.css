@@ -1620,3 +1620,7 @@ img {
   left: 0;
   z-index: 3;
 }
+
+.footer-map iframe {
+  width:100%;
+}
