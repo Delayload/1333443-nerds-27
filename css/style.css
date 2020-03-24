@@ -871,7 +871,7 @@ img {
 .footer-map__info {
   position: absolute;
   top: 54px;
-  left: 140px;
+
   z-index: 4;
 
   padding: 49px 48px 47px 50px;
@@ -930,7 +930,7 @@ img {
 }
 
 .header__container {
-  height: 235px;
+  height: 167px;
 }
 
 
@@ -968,7 +968,7 @@ img {
   position: relative;
 
   height: 41px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   padding-top: 39px;
   padding-right: 20px;
   padding-left: 20px;
@@ -1051,10 +1051,14 @@ img {
 .fieldset-grid__list,
 .fieldset-features__list {
   margin: 0;
-  margin-top: 16px;
+  margin-top: -5px;
   padding: 0;
 
   list-style: none;
+}
+
+.fieldset-features__list {
+  margin-top: 15px;
 }
 
 .fieldset-grid__item,
@@ -1432,7 +1436,7 @@ img {
 .writeus-popup__close {
   position: absolute;
   top: 80px;
-  right: 80px;
+  left: 848px;
 
   width: 22px;
   height: 22px;
@@ -1505,8 +1509,8 @@ img {
 
 .writeus-popup__textarea {
   box-sizing: border-box;
-  margin-top: 34px;
-  margin-bottom: 13px;
+  margin-top: 0px;
+  margin-bottom: 45px;
   padding: 0 13px;
   padding-top: 11px;
   padding-bottom: 12px;
@@ -1625,8 +1629,9 @@ img {
 
   top: 0;
   left: 0;
-  width: 100%;
-  min-width: 1200px;
+  right: 0;
+  width: 1440;
+
   height: 416px;
   margin: 0 auto;
 }
@@ -1635,7 +1640,7 @@ img {
   content: url("../img/map-marker.png");
   position: absolute;
   top: 89px;
-  left: 691px;
+  left: 1051px;
   z-index: 2;
 }
 
