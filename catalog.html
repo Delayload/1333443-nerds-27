@@ -4,14 +4,14 @@
         <meta charset="UTF-8" />
         <title>Нёрдс Каталог</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
-        <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/style.min.css" rel="stylesheet">
+        <link href="css/normalize.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
         <header  class="header">
             <div class="wrap">
                 <div class="header-site_navigation">
-                    <a class="site_navigation__link" href="index.html">
+                    <a class="site_navigation__link" href="index.html" alt="Логотип дизайн-студии Nёrd's">
                         <img  class="site-navigation__logo" src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии «Нёрдс»">
                     </a>
     
@@ -54,8 +54,8 @@
                                         <div class="fieldset-price__scale">
                                             <div class="scale__bar" style="margin-left: 0%; width: 70%"></div>
                                         </div>
-                                        <div class="toggle toggle-min"></div>
-                                        <div class="toggle toggle-max"></div>
+                                        <div class="toggle toggle-min" aria-label="Минимальная стоимость"></div>
+                                        <div class="toggle toggle-max" aria-label="Максимальная стоимость"></div>
                                     </div>
                                     <div class="fieldset-price__values">                                  
                                         <label class="fieldset-price__label" for="low-price">от <input name="min-price" id="low-price" type="text" value="0"></label>                                                                   
@@ -68,15 +68,17 @@
                                 <legend  class="fieldset-grid__legend">Сетка:</legend>
                                 <ul class="fieldset-grid__list">
                                     <li class="fieldset-grid__item">
-                                        <input class="fieldset-grid__input visually-hidden" type="radio" name="grid-type" value="adaptive" id="filter-adaptive" checked>
-                                        <label class="fieldset-grid__label" for="filter-adaptive">Адаптивная</label>
+                                        <li class="fieldset-grid__item">
+                                            <input class="fieldset-grid__input" type="radio" name="grid-type" value="adaptive" id="filter-adaptive" checked>
+                                            <label class="fieldset-grid__label" for="filter-adaptive">Адаптивная</label>
+                                        </li>
                                     </li>
                                     <li class="fieldset-grid__item">
-                                        <input class="fieldset-grid__input visually-hidden" type="radio" name="grid-type" value="fixed" id="filter-fixed">
+                                        <input class="fieldset-grid__input" type="radio" name="grid-type" value="fixed" id="filter-fixed">
                                         <label class="fieldset-grid__label" for="filter-fixed">Фиксированная</label>
                                     </li>
                                     <li class="fieldset-grid__item">
-                                        <input class="fieldset-grid__input visually-hidden" type="radio" name="grid-type" value="fluid" id="filter-fluid">
+                                        <input class="fieldset-grid__input" type="radio" name="grid-type" value="fluid" id="filter-fluid">
                                         <label class="fieldset-grid__label" for="filter-fluid">Резиновая</label>
                                     </li>
                                 </ul>
@@ -85,23 +87,23 @@
                                 <legend class="fieldset-features__legend">Особенности:</legend>
                                 <ul class="fieldset-features__list">
                                     <li class="fieldset-features__item">
-                                        <input class="fieldset-features__input visually-hidden" type="checkbox" name="slider" id="filter-slider" checked>
+                                        <input class="fieldset-features__input" type="checkbox" name="slider" id="filter-slider" checked>
                                         <label class="fieldset-features__label" for="filter-slider">Слайдер</label>
                                     </li>
                                     <li class="fieldset-features__item">
-                                        <input class="fieldset-features__input visually-hidden" type="checkbox" name="benefits-block" id="filter-benefits-block">
+                                        <input class="fieldset-features__input" type="checkbox" name="benefits-block" id="filter-benefits-block">
                                         <label class="fieldset-features__label" for="filter-benefits-block">Блок преимуществ</label>
                                     </li>
                                     <li class="fieldset-features__item">
-                                        <input class="fieldset-features__input visually-hidden" type="checkbox" name="news" id="filter-news" checked>
+                                        <input class="fieldset-features__input" type="checkbox" name="news" id="filter-news" checked>
                                         <label class="fieldset-features__label" for="filter-news">Новости</label>
                                     </li>
                                     <li class="fieldset-features__item">
-                                        <input class="fieldset-features__input visually-hidden" type="checkbox" name="gallery" id="filter-gallery">
+                                        <input class="fieldset-features__input" type="checkbox" name="gallery" id="filter-gallery">
                                         <label class="fieldset-features__label" for="filter-gallery">Галерея</label>
                                     </li>
                                     <li class="fieldset-features__item">
-                                        <input class="fieldset-features__input visually-hidden" type="checkbox" name="bin" id="filter-bin">
+                                        <input class="fieldset-features__input" type="checkbox" name="bin" id="filter-bin">
                                         <label class="fieldset-features__label" for="filter-bin">Корзина</label>
                                     </li>
                                 </ul>
@@ -124,8 +126,8 @@
                                 </li>
                             </ul>
                             <p class="switch__list">
-                                <a class="switch__down active-switch" href="#"></a>
-                                <a class="switch__up" href="#"></a>
+                                <a class="switch__down active-switch" href="#" aria-label="Ниже"></a>
+                                <a class="switch__up" href="#" aria-label="Выше"></a>
                             </p>
                         </div>
                         <section  class="catalog-products">
@@ -208,7 +210,7 @@
         <footer class="footer">
             <div class="footer-map">
                 <div class="map-img">
-                    <img src="img/map.png" alt="Адрес" height="1440" width="416">
+                    <img src="img/map.png" alt="Адрес" height="416" width="1440">
                 </div>      
                 <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1584417585568!5m2!1sru!2sru" height="416" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 <div class="footer-map__info">
