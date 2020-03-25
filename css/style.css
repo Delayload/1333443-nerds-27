@@ -6,14 +6,16 @@ input[type="radio"].visually-hidden {
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
+  overflow: hidden;
 
   white-space: nowrap;
 
-  clip-path: inset(100%);
+  border: 0;
+
   clip: rect(0 0 0 0);
-  overflow: hidden;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
 }
 
 body {
@@ -157,7 +159,7 @@ img {
   margin: 0;
   margin-bottom: 39px;
   padding-top: 26px;
-  max-width: 413px;
+  max-width: 415px;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -745,11 +747,11 @@ img {
 }
 
 #product-2:checked ~ .header-slider {
-  background: url("../img/slide2.png") no-repeat 431px 12px;
+  background: url("../img/slide2.png") no-repeat 496px -5px;
 }
 
 #product-3:checked ~ .header-slider {
-  background: url("../img/slide3.png") no-repeat 431px 12px;
+  background: url("../img/slide3.png") no-repeat 401px 13px;
 }
 
 .main-page__servises {
@@ -809,7 +811,7 @@ img {
 }
 
 .about-brief {
-  width:700px;
+  width:690px;
   padding-right: 100px;
 }
 
@@ -1098,12 +1100,16 @@ img {
 .fieldset-features__input {
   width: 25px;
   height: 25px;
-  content: "";
+
   position: absolute;
 
   top: -3px;
   left: 1px;
-
+  z-index: -1;
+  opacity: 0;
+  -webkit-appearance: none; 
+  -moz-appearance: none;
+  appearance: none;
 }
 
 
@@ -1112,10 +1118,10 @@ img {
   position: absolute;
   top: -3px;
   left: -35px;
-
+  z-index: 2;
   width: 25px;
   height: 25px;
-
+  
   background-image: url("../img/radio-off.svg");
   opacity: 0.4;
 }
@@ -1125,18 +1131,13 @@ img {
 }
 
 .fieldset-grid__input:checked + .fieldset-grid__label::before {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: -35px;
-
-  width: 25px;
-  height: 25px;
-
   background-image: url("../img/radio-on.svg");
   opacity: 0.4;
 }
 
+.fieldset-grid__input:focus + .fieldset-grid__label::before {
+  outline: 2px solid lightblue;
+}
 .fieldset-grid__input:checked + .fieldset-grid__label:hover::before {
   opacity: 1.0;
 }
@@ -1169,6 +1170,10 @@ img {
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.4;
+}
+
+.fieldset-features__input:focus + .fieldset-features__label::before {
+  outline: 2px solid lightblue;
 }
 
 .fieldset-features__input:checked + .fieldset-features__label:hover::before {
@@ -1653,7 +1658,7 @@ margin-right: 40px;
   content: url("../img/map-marker.png");
   position: absolute;
   top: 89px;
-  left: 1051px;
+  left: 57%;
   z-index: 2;
 }
 
