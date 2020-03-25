@@ -37,6 +37,7 @@ img {
 
 .button {
   display: block;
+  padding: 16px 0;
 
   font-weight: 500;
   font-size: 16px;
@@ -45,7 +46,6 @@ img {
   color: #ffffff;
   text-transform: uppercase;
 
-  padding:16px 0;
   background-color: #fb565a;
   border: none;
   border-radius: 2px;
@@ -156,10 +156,11 @@ img {
 
 .slider-item__text {
   width: 700px;
+  max-width: 415px;
   margin: 0;
   margin-bottom: 39px;
   padding-top: 26px;
-  max-width: 415px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -579,7 +580,6 @@ img {
 
 .catalog-pagination__link {
   display: block;
-
   padding: 16px 020px;
 
   font-weight: 500;
@@ -721,7 +721,7 @@ img {
 #product-2:checked ~ .header-slider #slide2,
 #product-3:checked ~ .header-slider #slide3 {
   display: block;
-  padding-bottom:80px;
+  padding-bottom: 80px;
 }
 
 #product-1:checked ~ .header-slider label[for="product-1"]:before,
@@ -811,7 +811,7 @@ img {
 }
 
 .about-brief {
-  width:690px;
+  width: 690px;
   padding-right: 100px;
 }
 
@@ -882,7 +882,6 @@ img {
 .footer-map__info {
   position: absolute;
   top: 54px;
-
   z-index: 4;
 
   padding: 49px 48px 47px 50px;
@@ -1003,6 +1002,7 @@ img {
   position: absolute;
   top: 30px;
   left: 0;
+
   width: 4px;
   height: 4px;
   padding: 0;
@@ -1098,18 +1098,19 @@ img {
 
 .fieldset-grid__input,
 .fieldset-features__input {
-  width: 25px;
-  height: 25px;
-
   position: absolute;
-
   top: -3px;
   left: 1px;
   z-index: -1;
+
+  width: 25px;
+  height: 25px;
+
   opacity: 0;
-  -webkit-appearance: none; 
-  -moz-appearance: none;
-  appearance: none;
+
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 
@@ -1119,9 +1120,10 @@ img {
   top: -3px;
   left: -35px;
   z-index: 2;
+
   width: 25px;
   height: 25px;
-  
+
   background-image: url("../img/radio-off.svg");
   opacity: 0.4;
 }
@@ -1494,7 +1496,7 @@ img {
 }
 
 .writeus-popup__item:first-of-type {
-margin-right: 40px;
+  margin-right: 40px;
 }
 
 .writeus-popup__input,
@@ -1527,7 +1529,7 @@ margin-right: 40px;
 
 .writeus-popup__textarea {
   box-sizing: border-box;
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 45px;
   padding: 0 13px;
   padding-top: 11px;
@@ -1641,15 +1643,14 @@ margin-right: 40px;
           animation: shake 0.6s;
 }
 
-.footer-map img{
-  z-index: 1;
+.footer-map img {
   position: absolute;
-
   top: 0;
-  left: 0;
   right: 0;
-  width: 1440;
+  left: 0;
+  z-index: 1;
 
+  width: 1440;
   height: 416px;
   margin: 0 auto;
 }
@@ -1670,5 +1671,5 @@ margin-right: 40px;
 }
 
 .footer-map iframe {
-  width:100%;
+  width: 100%;
 }
